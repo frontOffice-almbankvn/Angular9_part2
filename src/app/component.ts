@@ -54,5 +54,15 @@ export class ProductComponent {
     getProductCount(): number {
         return this.getProducts().length;
     }
+
     targetName: string = "Kayak";
+
+    getKey(index: number, product: Product){
+        return product.id;
+    }
+    counter: number = 1;
+
+    get nextProduct(): Product{
+        return this.model.getProducts().shift()!;
+    }
 }
