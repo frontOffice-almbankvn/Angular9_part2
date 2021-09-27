@@ -44,4 +44,15 @@ export class ProductComponent {
             color: product.price! > 50 ? "red" : "green"
         }
     }
+
+    getProduct(key: number): Product {
+        return this.model.getProduct(key);
+    }
+    getProducts(): Product[] {
+        return this.model.getProducts();
+    }
+    getProductCount(): number {
+        return this.getProducts().length;
+    }
+    targetName: string = "Kayak";
 }
